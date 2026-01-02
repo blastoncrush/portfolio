@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arthur Evain</title>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">🇫🇷 Version française</a>
+            <a href="index.html">Home</a>
+            <a href="cv.html">CV</a>
+            <a href="projets.html">Projects</a>
+        </nav>
+        <h1>List of Projects</h1>
+    </header>
+
+    <main>
+        <h2>Professional Projects</h2>
+
+        <article>
+            <header>
+                <h3>Internship at Secure IC</h3>
+                <p><em>Summer 2025</em></p>
+            </header>
+            <p>Implementation of various IDS models on CAN bus. 
+                They were based on AI models (LSTM, autoencoder, BERT, CNN, adversarial networks). 
+                The IDS was then implemented on an Alstef AGV.</p>
+            <img src="../ressources/sic.jpeg" alt="Logo of Secure IC" width="300">
+            <footer>
+                <p><a href="../ressources/rapport_sic.pdf" download>Download the internship report (in french)</a></p>
+            </footer>
+        </article>
+
+        <h2>Academic Projects</h2>
+
+        <article>
+            <header>
+                <h3>Inpainting</h3>
+                <p><em>End of 2025</em></p>
+            </header>
+            <p>
+                Implementation of an inpainting algorithm based on patch copying. 
+                Below is an example application where a horse is removed from an image.
+            </p>
+            <img src="../ressources/baule.jpg" alt="Original image" width="300">
+            <img src="../ressources/result_baule.png" alt="Image after applying the algorithm" width="300">
+            <footer>
+                <p><a href="https://github.com/blastoncrush/inpainting">Repository link</a></p>
+                <p><a href="../ressources/inpainting.pdf" download>Download the paper</a></p>
+            </footer>
+        </article>
+
+        <article>
+            <header>
+                <h3>Quantum Cryptography</h3>
+                <p><em>Mid 2025</em></p>
+            </header>
+            <p>
+                First-year end project associated with a researcher in quantum computing.
+                We implemented state-of-the-art algorithms to verify that they are correct and especially that they can be interesting despite the noise of a real machine.
+                We connected to an IBM Quantum machine via their API.
+                Below is a quantum circuit realized on a real machine using the Qiskit library.
+            </p>
+            <img src="../ressources/qiskit.png" alt="Quantum circuit realized with Qiskit" width="300">
+            <footer>
+                <p><a href="https://github.com/blastoncrush/crypto-quantique">Repository link</a></p>
+            </footer>
+        </article>
+
+        <article>
+            <header>
+                <h3>Autonomous Car</h3>
+                <p><em>End 2024 - Beginning 2025</em></p>
+            </header>
+            <p>
+                First-year beginning project in a group of 5.
+                We designed an autonomous car using a Raspberry Pi and a camera.
+                After designing the vector design, we implemented an autonomous strategy and then worked in groups to capture beacons on a grid.
+                Our group achieved the best performance in the class.
+            </p>
+            <img src="../ressources/robotquiroule.jpg" alt="Our autonomous car" width="300">
+            <footer>
+                <p><a href="https://github.com/blastoncrush/artefact">Repository link</a></p>
+            </footer>
+        </article>
+
+        <article>
+            <header>
+                <h3>C Compiler</h3>
+                <p><em>End 2024</em></p>
+            </header>
+            <p>
+                First-year beginning project in a group of 4.
+                We implemented a C compiler to x86-64 assembly code.
+                OCaml libraries are used to lex and parse the code to be compiled and create a JSON file.
+                A Python file then interprets this JSON file to write an assembly file that behaves as intended by the original code.
+                Pointers, local and global variables, arithmetic operations, arrays, functions, printf/scanf, if/else, while loops, and malloc are supported.
+            </p>
+            <img src="../ressources/assembly.png" alt="Quantum circuit realized with Qiskit" width="300">
+            <footer>
+                <p><a href="https://github.com/blastoncrush/c_compilator">Repository link</a></p>
+            </footer>
+        </article>
+
+        <article>
+            <header>
+                <h3>TIPE</h3>
+                <p><em>2023 - 2024</em></p>
+            </header>
+            <p>
+                Preparatory class project (MPI*) to be presented orally during the entrance exams.
+                The subject was the application of the NEAT genetic algorithm to autonomous driving.
+                Each neural network received as input the distance to the walls in 5 directions and had to give a direction and acceleration command to the car.
+                The code, in Python, allowed convergence towards cars able to navigate a complex circuit (as shown below).
+            </p>
+            <img src="../ressources/PIERRE_CUP_ZONED3.png" alt="Circuit" width="300">
+            <footer>
+                <p><a href="https://github.com/blastoncrush/neat_car">Repository link</a></p>
+                <p><a href="../ressources/Diapo TIPE.pdf" download>Download the presentation</a></p>
+            </footer>
+        </article>
+
+        <h2>Personal projects</h2>
+
+        <article>
+            <header>
+                <h3>Trading</h3>
+                <p><em>2024</em></p>
+            </header>
+            <p>
+                Implementation of a trading application in Python.
+                The code allowed reading market data and adding technical indicators.
+                I intended to add backtested trading strategies based on these indicators, but my motivation faded along with my faith in this method.
+                The code seems deprecated but is still available below.
+            </p>
+            <footer>
+                <p><a href="https://github.com/blastoncrush/trading">Repository link</a></p>
+            </footer>
+        </article>
+    </main>
+
+    <footer>
+        <p>© 2025 - Evain Arthur</p>
+    </footer>
+</body>
+</html>

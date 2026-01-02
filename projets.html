@@ -24,7 +24,7 @@
         <article>
             <header>
                 <h3>Stage chez Secure IC</h3>
-                <p><em>Stage axé IA réalisé durant l'été 2025</em></p>
+                <p><em>Eté 2025</em></p>
             </header>
             <p>Implémentation de divers modèles d'IDS sur bus CAN. 
                 Ils étaient basés sur des modèles d'IA (LSTM, autoencodeur, BERT, CNN, adversarial networks). 
@@ -39,15 +39,106 @@
 
         <article>
             <header>
-                <h3>Stage chez Secure IC</h3>
-                <p><em>Stage axé IA réalisé durant l'été 2025</em></p>
+                <h3>Inpainting</h3>
+                <p><em>Fin 2025</em></p>
             </header>
-            <p>Implémentation de divers modèles d'IDS sur bus CAN. 
-                Ils étaient basés sur des modèles d'IA (LSTM, autoencodeur, BERT, CNN, adversarial networks). 
-                L'IDS a ensuite été implémenté sur un AGV d'Alstef.</p>
-            <img src="ressources/sic.jpeg" alt="Logo de Secure IC" width="300">
+            <p>
+                Implémentation d'un algorithme d'inpainting basé sur la copie de patchs. 
+                Ci-dessous un exemple d'application où on supprime un cheval d'une image.
+            </p>
+            <img src="ressources/baule.jpg" alt="Image originale" width="300">
+            <img src="ressources/result_baule.png" alt="Image après application de l'algorithme" width="300">
             <footer>
-                <p><a href="ressources/rapport_sic.pdf" download>Télécharger le rapport de stage</a></p>
+                <p><a href="https://github.com/blastoncrush/inpainting">Lien du dépôt</a></p>
+                <p><a href="ressources/inpainting.pdf" download>Télécharger le papier</a></p>
+            </footer>
+        </article>
+
+        <article>
+            <header>
+                <h3>Cryptographie quantique</h3>
+                <p><em>Milieu 2025</em></p>
+            </header>
+            <p>
+                Projet de fin de première année associé avec un chercheur en informatique quantique.
+                Nous avons implémenté des algorithmes à l'état de l'art pour vérifier qu'ils sont corrects et surtout qu'ils peuvent être intéressants malgré le bruit d'une machine réel.
+                Nous nous sommes pour cela connecté à une machine IBM Quantum via leur API.
+                Ci-dessous un circuit quantique réalisé sur machine réelle grâce à la libraire Qiskit.
+            </p>
+            <img src="ressources/qiskit.png" alt="Circuit quantique réalisé avec Qiskit" width="300">
+            <footer>
+                <p><a href="https://github.com/blastoncrush/crypto-quantique">Lien du dépôt</a></p>
+            </footer>
+        </article>
+
+        <article>
+            <header>
+                <h3>Voiture autonome</h3>
+                <p><em>Fin 2024 - Début 2025</em></p>
+            </header>
+            <p>
+                Projet de début de première année en groupe de 5.
+                Nous avons conçu une voiture autonome à partir d'une raspberry Pi et d'une caméra.
+                Après avoir conçu le design en vectoriel, nous avons implémenté une stratégie autonome puis par groupe pour capturer des balises sur une grille.
+                Notre groupe a signé la meilleure performance de la promotion.
+            </p>
+            <img src="ressources/robotquiroule.jpg" alt="Notre voiture autonome" width="300">
+            <footer>
+                <p><a href="https://github.com/blastoncrush/artefact">Lien du dépôt</a></p>
+            </footer>
+        </article>
+
+        <article>
+            <header>
+                <h3>Compilateur C</h3>
+                <p><em>Fin 2024</em></p>
+            </header>
+            <p>
+                Projet de début de première année en groupe de 4.
+                Nous avons implémenté un compilateur de C vers du code assembleur x86-64.
+                Des librairies OCaml sont utilisées pour lexer et parser le code à compilateur et créer un fichier json.
+                Un fichier python interprète ensuite ce fichier json pour écrire un fichier assembleur qui a le comportement voulu par le code initial.
+                Les pointeurs, les variables locales et globales, les opérations arithmétiques, les tableaux, les fonctions, les printf/scanf, les if/else, les boucles while et les malloc sont supportés.
+            </p>
+            <img src="ressources/assembly.png" alt="Circuit quantique réalisé avec Qiskit" width="300">
+            <footer>
+                <p><a href="https://github.com/blastoncrush/c_compilator">Lien du dépôt</a></p>
+            </footer>
+        </article>
+
+        <article>
+            <header>
+                <h3>TIPE</h3>
+                <p><em>2023 - 2024</em></p>
+            </header>
+            <p>
+                Projet de prépa (MPI*) à présenter à l'oral lors des concours.
+                Le sujet portait sur l'application de l'algorithme génétique NEAT à la conduite autonome.
+                Chaque réseau de neurones recevait en entrée la distance aux murs selon 5 directions et devait donner un ordre de direction et d'accélération à la voiture.
+                Le code, en Python, permettait de converger vers des voitures réussissant à parcourir un circuit complexe (comme ci-dessous).
+            </p>
+            <img src="ressources/PIERRE_CUP_ZONED3.png" alt="Circuit" width="300">
+            <footer>
+                <p><a href="https://github.com/blastoncrush/neat_car">Lien du dépôt</a></p>
+                <p><a href="ressources/Diapo TIPE.pdf" download>Télécharger la présentation</a></p>
+            </footer>
+        </article>
+
+        <h2>Projets personnels</h2>
+
+        <article>
+            <header>
+                <h3>Trading</h3>
+                <p><em>2024</em></p>
+            </header>
+            <p>
+                Implémentation d'une application de trading en Python.
+                Le code permettait de lire des données de marché et d'y ajouter des indicateurs techniques.
+                Je comptais y ajouter des stratégies de trading backtestées basées sur ces indicateurs, mais ma motivation s'est éteinte avec ma perte de foi en cette méthode.
+                Le code semble déprécié mais est toujours disponible ci-dessous.
+            </p>
+            <footer>
+                <p><a href="https://github.com/blastoncrush/trading">Lien du dépôt</a></p>
             </footer>
         </article>
     </main>

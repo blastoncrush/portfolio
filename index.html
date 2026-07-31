@@ -1,36 +1,266 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arthur Evain</title>
+    <title>Arthur Evain - Portfolio</title>
     <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: var(--bg);
+            padding: 0.8rem 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        section {
+            scroll-margin-top: 4rem;
+            padding-top: 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        /* Conteneur d'une ligne du CV */
+        
+        .cv-item {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            align-items: baseline;
+        }
+        /* Style de la date à gauche */
+        
+        .cv-date {
+            font-weight: bold;
+            color: var(--text-light);
+            /* Couleur légèrement grisée de Simple.css */
+            font-size: 0.95rem;
+        }
+        /* Style du contenu à droite */
+        
+        .cv-content h4 {
+            margin: 0 0 0.2rem 0;
+            font-size: 1.05rem;
+        }
+        
+        .cv-content p {
+            margin: 0;
+            color: var(--text);
+        }
+        
+        .cv-content .institution {
+            font-style: italic;
+            color: var(--text-light);
+            margin-bottom: 0.4rem;
+        }
+        /* Sur écran de téléphone : on passe les dates au-dessus du texte */
+        
+        @media (max-width: 600px) {
+            .cv-item {
+                grid-template-columns: 1fr;
+                gap: 0.3rem;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <header>
         <nav>
-            <a href="./en/index.html">🇬🇧 English version</a>
-            <a href="index.html">Accueil</a>
-            <a href="cv.html">CV</a>
-            <a href="projets.html">Projets</a>
-            <a href="passions.html">Passions</a>
+            <!-- <a href="./en/index.html">🇬🇧 English</a> -->
+            <a href="#accueil">Accueil</a>
+            <a href="#cv">CV</a>
+            <a href="#projets">Projets</a>
+            <a href="#passions">Passions</a>
+            <a href="#contact">Contact</a>
         </nav>
-        <h1>Bienvenue sur le portfolio de Arthur Evain</h1>
-        <p>Je suis un étudiant en deuxième année à Télécom Paris.</p>
+
+        <div id="accueil">
+            <h1>Bienvenue sur le portfolio de Arthur Evain</h1>
+            <p>Je suis un étudiant en deuxième année à Télécom Paris.</p>
+        </div>
     </header>
 
+
     <main>
-        <section>
-            <h3>Contact</h3>
+        <!-- Section Contact -->
+        <section id="contact">
+            <h2>Contact</h2>
             <ul>
-                <li><strong>Email</strong> — arthur.evain@telecom-paris.fr</li>
-                <li><strong>LinkedIn</strong> — <a href="https://www.linkedin.com/in/arthur-evain-35760sg/">Mon compte</a></li>
+                <li><strong>Email</strong> — <a href="mailto:arthur.evain@telecom-paris.fr">arthur.evain@telecom-paris.fr</a></li>
+                <li><strong>LinkedIn</strong> — <a href="https://www.linkedin.com/in/arthur-evain-35760sg/" target="_blank">Mon profil</a></li>
             </ul>
         </section>
+
+        <!-- Section CV -->
+        <section id="cv">
+            <h2>Curriculum Vitae</h2>
+            <p><a href="ressources/cv_fr.pdf" download>Télécharger le CV</a></p>
+
+            <h3>Formation</h3>
+
+            <div class="cv-item">
+                <div class="cv-date">2024 – Présent</div>
+                <div class="cv-content">
+                    <h4>Cycle Ingénieur</h4>
+                    <div class="institution">Télécom Paris, Institut Polytechnique de Paris</div>
+                    <p>Spécialisation en probabilités, imagerie algorithmique et sciences des données.</p>
+                </div>
+            </div>
+
+            <div class="cv-item">
+                <div class="cv-date">2022 – 2024</div>
+                <div class="cv-content">
+                    <h4>Classes Préparatoires aux Grandes Écoles (MP2I / MPI*)</h4>
+                    <div class="institution">Lycée Clemenceau, Nantes</div>
+                    <p>Formation intensive en mathématiques, informatique et physique.</p>
+                </div>
+            </div>
+
+
+            <h3>Expériences & Projets</h3>
+
+            <div class="cv-item">
+                <div class="cv-date">2025</div>
+                <div class="cv-content">
+                    <h4>Stage ingénieur</h4>
+                    <div class="institution">Secure-IC, Cesson-Sévigné</div>
+                    <p>Implémentation de divers modèles d'IDS sur bus CAN.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Section Projets -->
+        <section id="projets">
+            <h2>Projets professionnels</h2>
+
+            <article>
+                <header>
+                    <h3>Stage chez Secure IC</h3>
+                    <p><em>Eté 2025</em></p>
+                </header>
+                <p>Implémentation de divers modèles d'IDS sur bus CAN. Ils étaient basés sur des modèles d'IA (LSTM, autoencodeur, BERT, CNN, adversarial networks). L'IDS a ensuite été implémenté sur un AGV d'Alstef.</p>
+                <img src="ressources/sic.jpeg" alt="Logo de Secure IC" width="300">
+                <footer>
+                    <p><a href="ressources/rapport_sic.pdf" download>Télécharger le rapport de stage</a></p>
+                </footer>
+            </article>
+
+            <h2>Projets académiques</h2>
+
+            <article>
+                <header>
+                    <h3>Inpainting</h3>
+                    <p><em>Fin 2025</em></p>
+                </header>
+                <p>
+                    Implémentation d'un algorithme d'inpainting basé sur la copie de patchs. Ci-dessous un exemple d'application où on supprime un cheval d'une image.
+                </p>
+                <img src="ressources/baule.jpg" alt="Image originale" width="300">
+                <img src="ressources/result_baule.png" alt="Image après application de l'algorithme" width="300">
+                <footer>
+                    <p><a href="https://github.com/blastoncrush/inpainting">Lien du dépôt</a></p>
+                    <p><a href="ressources/inpainting.pdf" download>Télécharger le papier</a></p>
+                </footer>
+            </article>
+
+            <article>
+                <header>
+                    <h3>Cryptographie quantique</h3>
+                    <p><em>Milieu 2025</em></p>
+                </header>
+                <p>
+                    Projet de fin de première année associé avec un chercheur en informatique quantique. Nous avons implémenté des algorithmes à l'état de l'art pour vérifier qu'ils sont corrects et surtout qu'ils peuvent être intéressants malgré le bruit d'une machine réel.
+                    Nous nous sommes pour cela connecté à une machine IBM Quantum via leur API. Ci-dessous un circuit quantique réalisé sur machine réelle grâce à la libraire Qiskit.
+                </p>
+                <img src="ressources/qiskit.png" alt="Circuit quantique réalisé avec Qiskit" width="300">
+                <footer>
+                    <p><a href="https://github.com/blastoncrush/crypto-quantique">Lien du dépôt</a></p>
+                </footer>
+            </article>
+
+            <article>
+                <header>
+                    <h3>Voiture autonome</h3>
+                    <p><em>Fin 2024 - Début 2025</em></p>
+                </header>
+                <p>
+                    Projet de début de première année en groupe de 5. Nous avons conçu une voiture autonome à partir d'une raspberry Pi et d'une caméra. Après avoir conçu le design en vectoriel, nous avons implémenté une stratégie autonome puis par groupe pour capturer des
+                    balises sur une grille. Notre groupe a signé la meilleure performance de la promotion.
+                </p>
+                <img src="ressources/robotquiroule.jpg" alt="Notre voiture autonome" width="300">
+                <footer>
+                    <p><a href="https://github.com/blastoncrush/artefact">Lien du dépôt</a></p>
+                </footer>
+            </article>
+
+            <article>
+                <header>
+                    <h3>Compilateur C</h3>
+                    <p><em>Fin 2024</em></p>
+                </header>
+                <p>
+                    Projet de début de première année en groupe de 4. Nous avons implémenté un compilateur de C vers du code assembleur x86-64. Des librairies OCaml sont utilisées pour lexer et parser le code à compilateur et créer un fichier json. Un fichier python interprète
+                    ensuite ce fichier json pour écrire un fichier assembleur qui a le comportement voulu par le code initial. Les pointeurs, les variables locales et globales, les opérations arithmétiques, les tableaux, les fonctions, les printf/scanf,
+                    les if/else, les boucles while et les malloc sont supportés.
+                </p>
+                <img src="ressources/assembly.png" alt="Circuit quantique réalisé avec Qiskit" width="300">
+                <footer>
+                    <p><a href="https://github.com/blastoncrush/c_compilator">Lien du dépôt</a></p>
+                </footer>
+            </article>
+
+            <article>
+                <header>
+                    <h3>TIPE</h3>
+                    <p><em>2023 - 2024</em></p>
+                </header>
+                <p>
+                    Projet de prépa (MPI*) à présenter à l'oral lors des concours. Le sujet portait sur l'application de l'algorithme génétique NEAT à la conduite autonome. Chaque réseau de neurones recevait en entrée la distance aux murs selon 5 directions et devait donner
+                    un ordre de direction et d'accélération à la voiture. Le code, en Python, permettait de converger vers des voitures réussissant à parcourir un circuit complexe (comme ci-dessous).
+                </p>
+                <img src="ressources/PIERRE_CUP_ZONED3.png" alt="Circuit" width="300">
+                <footer>
+                    <p><a href="https://github.com/blastoncrush/neat_car">Lien du dépôt</a></p>
+                    <p><a href="ressources/Diapo TIPE.pdf" download>Télécharger la présentation</a></p>
+                </footer>
+            </article>
+
+            <h2>Projets personnels</h2>
+
+            <article>
+                <header>
+                    <h3>Trading</h3>
+                    <p><em>2024</em></p>
+                </header>
+                <p>
+                    Implémentation d'une application de trading en Python. Le code permettait de lire des données de marché et d'y ajouter des indicateurs techniques. Je comptais y ajouter des stratégies de trading backtestées basées sur ces indicateurs, mais ma motivation
+                    s'est éteinte avec ma perte de foi en cette méthode. Le code semble déprécié mais est toujours disponible ci-dessous.
+                </p>
+                <footer>
+                    <p><a href="https://github.com/blastoncrush/trading">Lien du dépôt</a></p>
+                </footer>
+            </article>
+        </section>
+
+        <!-- Section Passions -->
+        <section id="passions">
+            <h2>Passions</h2>
+            <p>En dehors des cours à Télécom Paris, je me passionne pour la musique classique, la callisthénie et l'oenologie.</p>
+        </section>
+
     </main>
 
     <footer>
-        <p>© 2025 - Evain Arthur</p>
+        <p>© 2026 - Evain Arthur</p>
     </footer>
 </body>
+
 </html>

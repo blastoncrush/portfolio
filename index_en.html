@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arthur Evain - Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: var(--bg);
+            padding: 0.8rem 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        section {
+            scroll-margin-top: 4rem;
+            padding-top: 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        /* CV item layout */
+        
+        .cv-item {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            align-items: baseline;
+        }
+        /* Date column styling */
+        
+        .cv-date {
+            font-weight: bold;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+        /* Content column styling */
+        
+        .cv-content h4 {
+            margin: 0 0 0.2rem 0;
+            font-size: 1.05rem;
+        }
+        
+        .cv-content p {
+            margin: 0;
+            color: var(--text);
+        }
+        
+        .cv-content .institution {
+            font-style: italic;
+            color: var(--text-light);
+            margin-bottom: 0.4rem;
+        }
+        /* Mobile responsive layout: stack dates above text */
+        
+        @media (max-width: 600px) {
+            .cv-item {
+                grid-template-columns: 1fr;
+                gap: 0.3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="./index.html">🇫🇷 Français</a>
+            <a href="#accueil">Home</a>
+            <a href="#cv">Resume</a>
+            <a href="#projets">Projects</a>
+            <a href="#passions">Interests</a>
+        </nav>
+
+        <div id="accueil">
+            <h1>Welcome to Arthur Evain's Portfolio</h1>
+            <p>I am a second-year engineering student at Télécom Paris.</p>
+        </div>
+    </header>
+
+    <main>
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <ul>
+                <li><strong>Email</strong> — <a href="mailto:arthur.evain@telecom-paris.fr">arthur.evain@telecom-paris.fr</a></li>
+                <li><strong>LinkedIn</strong> — <a href="https://www.linkedin.com/in/arthur-evain-35760sg/" target="_blank">My Profile</a></li>
+            </ul>
+        </section>
+
+        <!-- CV Section -->
+        <section id="cv">
+            <h2>Curriculum Vitae</h2>
+            <p><a href="ressources/CV.pdf" download>Download Resume (PDF)</a></p>
+
+            <h3>Education</h3>
+
+            <div class="cv-item">
+                <div class="cv-date">2026 – 2027</div>
+                <div class="cv-content">
+                    <h4>MVA Master's Program</h4>
+                    <div class="institution">École Normale Supérieure, Université Paris-Saclay</div>
+                    <p>Research Master's degree in Mathematics, Vision, and Learning (MVA).</p>
+                </div>
+            </div>
+
+            <div class="cv-item">
+                <div class="cv-date">2024 – 2027</div>
+                <div class="cv-content">
+                    <h4>Engineering Degree (MSc equivalent)</h4>
+                    <div class="institution">Télécom Paris, Institut Polytechnique de Paris</div>
+                    <p>Specialization in applied probability, algorithmic imaging, and data science.</p>
+                </div>
+            </div>
+
+            <div class="cv-item">
+                <div class="cv-date">2022 – 2024</div>
+                <div class="cv-content">
+                    <h4>Preparatory Classes for Grandes Écoles (MP2I / MPI*)</h4>
+                    <div class="institution">Lycée Clemenceau, Nantes, France</div>
+                    <p>Intensive undergraduate courses in mathematics, computer science, and physics.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projets">
+            <h2>Professional Projects</h2>
+
+            <article>
+                <header>
+                    <h3>Internship at Secure-IC</h3>
+                    <p><em>Summer 2025</em></p>
+                </header>
+                <p>Implemented various Intrusion Detection System (IDS) models on CAN buses based on AI architectures (LSTM, autoencoder, BERT, CNN, adversarial networks). The IDS was subsequently deployed on an Alstef Automated Guided Vehicle (AGV).</p>
+                <img src="ressources/sic.jpeg" alt="Secure-IC Logo" width="300">
+                <footer>
+                    <p><a href="ressources/rapport_sic.pdf" download>Download internship report</a></p>
+                </footer>
+            </article>
+
+            <h2>Academic Projects</h2>
+
+            <article>
+                <header>
+                    <h3>Abstract Art Classification</h3>
+                    <p><em>Mid-2026</em></p>
+                </header>
+                <p>
+                    Four-person team project focusing on unsupervised classification of an imbalanced dataset of abstract paintings. We extracted geometric features alongside CNN and autoencoder embeddings, then identified clusters using the K-means algorithm. The results
+                    were subsequently refined through empirical analysis.
+                </p>
+                <img src="ressources/abstract.jpg" alt="Various artworks sharing similar circular geometric patterns." width="300">
+                <footer>
+                    <p><a href="https://github.com/blastoncrush/projet-im06">Repository link</a></p>
+                    <p><a href="ressources/Rapport_IM06.pdf" download>Download final report</a></p>
+                </footer>
+            </article>
+
+            <article>
+                <header>
+                    <h3>Kaggle Challenge — White Blood Cell Classification</h3>
+                    <p><em>Early 2026</em></p>
+                </header>
+                <p>
+                    Kaggle competition where I ranked 9th out of 77 participants. The objective was to train a model to classify white blood cell images across 13 classes from a highly imbalanced dataset. My approach combined classical image segmentation methods (non-ML)
+                    with fine-tuning a pre-trained neural network using handcrafted extracted features.
+                </p>
+                <img src="ressources/WBC.jpg" alt="Different types of white blood cells. Source: https://ieeexplore.ieee.org/document/6968362" width="300">
+                <footer>
+                    <p><a href="https://github.com/blastoncrush/challenge-im05">Repository link</a></p>
+                    <p><a href="ressources/Report_IM05.pdf" download>Download final report</a></p>
+                </footer>
+            </article>
+
+            <article>
+                <header>
+                    <h3>Image Inpainting</h3>
+                    <p><em>Late 2025</em></p>
+                </header>
+                <p>
+                    Implementation of a patch-based image inpainting algorithm. Below is an application example showing the seamless removal of a horse from the original photograph.
+                </p>
+                <img src="ressources/baule.jpg" alt="Original image" width="300">
+                <img src="ressources/result_baule.png" alt="Image after applying the inpainting algorithm" width="300">
+                <footer>
+                    <p><a href="https://github.com/blastoncrush/inpainting">Repository link</a></p>
+                    <p><a href="ressources/inpainting.pdf" download>Download paper</a></p>
+                </footer>
+            </article>
+
+            <article>
+                <header>
+                    <h3>Quantum Cryptography</h3>
+                    <p><em>Mid-2025</em></p>
+                </header>
+                <p>
+                    First-year final project conducted in collaboration with a quantum computing researcher. We implemented state-of-the-art cryptography algorithms to verify their theoretical correctness and evaluate their robustness against hardware noise on real quantum
+                    machines. We executed experiments on IBM Quantum hardware via API. Below is a quantum circuit generated and tested using the Qiskit library.
+                </p>
+                <img src="ressources/qiskit.png" alt="Quantum circuit designed with Qiskit" width="300">
+                <footer>
+                    <p><a href="https://github.com/blastoncrush/crypto-quantique">Repository link</a></p>
+                </footer>
+            </article>
+
+            <article>
+                <header>
+                    <h3>Autonomous Robot Car</h3>
+                    <p><em>Late 2024 - Early 2025</em></p>
+                </header>
+                <p>
+                    First-year team project (5 members). We designed and built an autonomous car powered by a Raspberry Pi and a camera module. After designing the chassis in CAD, we developed autonomous navigation algorithms to detect and reach target beacons on a grid.
+                    Our team achieved the best overall performance in our class cohort.
+                </p>
+                <img src="ressources/robotquiroule.jpg" alt="Our autonomous car" width="300">
+                <footer>
+                    <p><a href="https://github.com/blastoncrush/artefact">Repository link</a></p>
+                </footer>
+            </article>
+
+            <article>
+                <header>
+                    <h3>C Compiler</h3>
+                    <p><em>Late 2024</em></p>
+                </header>
+                <p>
+                    First-year team project (4 members). We developed a C to x86-64 assembly compiler. OCaml libraries were used for lexical analysis and parsing to generate an intermediate JSON abstract syntax tree. A Python backend then interprets this JSON file to emit
+                    functional assembly code matching the original C program behavior. Supported features include pointers, local/global variables, arithmetic operations, arrays, functions, printf/scanf, conditional statements (if/else), while loops,
+                    and dynamic memory allocation (malloc).
+                </p>
+                <img src="ressources/assembly.png" alt="Assembly compiler project overview" width="300">
+                <footer>
+                    <p><a href="https://github.com/blastoncrush/c_compilator">Repository link</a></p>
+                </footer>
+            </article>
+
+            <article>
+                <header>
+                    <h3>TIPE — NEAT Algorithm for Autonomous Driving</h3>
+                    <p><em>2023 - 2024</em></p>
+                </header>
+                <p>
+                    Preparatory class research project (MPI*) presented for French Grandes Écoles oral entrance exams. The study focused on applying the NEAT (NeuroEvolution of Augmenting Topologies) genetic algorithm to autonomous driving. Neural networks received distance
+                    measurements from 5 directional wall sensors and outputted steering and acceleration controls. Built in Python, the evolutionary simulation converged toward agents capable of successfully completing complex tracks (shown below).
+                </p>
+                <img src="ressources/PIERRE_CUP_ZONED3.png" alt="Simulation track layout" width="300">
+                <footer>
+                    <p><a href="https://github.com/blastoncrush/neat_car">Repository link</a></p>
+                    <p><a href="ressources/Diapo TIPE.pdf" download>Download presentation slides</a></p>
+                </footer>
+            </article>
+
+            <h2>Personal Projects</h2>
+
+            <article>
+                <header>
+                    <h3>Algorithmic Trading Platform</h3>
+                    <p><em>2024</em></p>
+                </header>
+                <p>
+                    Built a Python trading application capable of streaming market data and computing various technical indicators. While I initially planned to implement and backtest automated trading strategies based on these indicators, I set the project aside after questioning
+                    the long-term viability of standard technical analysis. The codebase is no longer actively maintained but remains available below.
+                </p>
+                <footer>
+                    <p><a href="https://github.com/blastoncrush/trading">Repository link</a></p>
+                </footer>
+            </article>
+        </section>
+
+        <!-- Interests Section -->
+        <section id="passions">
+            <h2>Interests</h2>
+            <p>Outside of my coursework at Télécom Paris, I am passionate about classical music, calisthenics, running, and oenology.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 - Evain Arthur</p>
+    </footer>
+</body>
+
+</html>

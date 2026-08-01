@@ -6,7 +6,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arthur Evain - Portfolio</title>
     <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <!-- 1. Importer la police aristocratique depuis Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
     <style>
+        /* 1. THÈME CLAIR : Fond "Eggshell" & Cartes Blanc Pur */
+        
+         :root {
+            --bg: #f2ede4;
+            /* Beige coquille d'œuf (plus contrasté qu'avant) */
+            --surface: #ffffff;
+            /* Blanc pur pour les articles et le header */
+            --text: #1a1917;
+            /* Noir encre profond */
+            --text-light: #5a5751;
+            /* Gris anthracite lisible */
+            --border: #d5ccbd;
+            /* Bordure beige visible */
+            --accent: #4a3f35;
+            /* Liens brun impérial */
+        }
+        /* 2. THÈME SOMBRE : "Obsidian Executive Card" */
+        
+        @media (prefers-color-scheme: dark) {
+             :root {
+                --bg: #141311;
+                /* Noir anthracite très profond */
+                --surface: #201e1b;
+                /* Noir-brun légèrement plus clair pour les cartes */
+                --text: #f0eae1;
+                /* Texte couleur ivoire / bone (très lisible) */
+                --text-light: #a49e93;
+                /* Ivoire grisé */
+                --border: #36322d;
+                /* Bordure sombre discrète */
+                --accent: #d8ccb4;
+                /* Liens couleur champagne */
+            }
+        }
+        /* 3. Typographie aristocratique (American Psycho) */
+        
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        nav a,
+        .cv-date {
+            font-family: 'Cormorant Garamond', 'EB Garamond', serif;
+        }
+        
+        h1,
+        h2,
+        h3,
+        nav a {
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            font-weight: 600;
+            color: var(--text);
+        }
+        
+        h1 {
+            font-size: 2.3rem;
+            margin-bottom: 0.5rem;
+        }
+        /* 4. Correction du Header et du Menu (Plus de gris terne en mode sombre) */
+        
+        header {
+            background-color: var(--surface);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 2rem;
+        }
+        
+        header p {
+            color: var(--text-light);
+        }
+        
         html {
             scroll-behavior: smooth;
         }
@@ -20,12 +101,37 @@
             border-bottom: 1px solid var(--border);
         }
         
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+        }
+        
+        nav a:hover {
+            color: var(--accent);
+        }
+        
         section {
             scroll-margin-top: 4rem;
             padding-top: 1rem;
             border-bottom: 1px solid var(--border);
         }
-        /* Conteneur d'une ligne du CV */
+        /* 5. Contraste net pour les fiches de projets (Articles) */
+        
+        article {
+            background-color: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        article:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+        }
+        /* 6. Grille CV alignée */
         
         .cv-item {
             display: grid;
@@ -34,19 +140,18 @@
             margin-bottom: 1.5rem;
             align-items: baseline;
         }
-        /* Style de la date à gauche */
         
         .cv-date {
             font-weight: bold;
             color: var(--text-light);
-            /* Couleur légèrement grisée de Simple.css */
-            font-size: 0.95rem;
+            font-size: 1.05rem;
         }
-        /* Style du contenu à droite */
         
         .cv-content h4 {
             margin: 0 0 0.2rem 0;
-            font-size: 1.05rem;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text);
         }
         
         .cv-content p {
@@ -59,7 +164,6 @@
             color: var(--text-light);
             margin-bottom: 0.4rem;
         }
-        /* Sur écran de téléphone : on passe les dates au-dessus du texte */
         
         @media (max-width: 600px) {
             .cv-item {

@@ -11,41 +11,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 
     <style>
-        /* 1. THÈME CLAIR : Fond "Eggshell" & Cartes Blanc Pur */
-        
          :root {
             --bg: #f2ede4;
-            /* Beige coquille d'œuf (plus contrasté qu'avant) */
             --surface: #ffffff;
-            /* Blanc pur pour les articles et le header */
             --text: #1a1917;
-            /* Noir encre profond */
             --text-light: #5a5751;
-            /* Gris anthracite lisible */
             --border: #d5ccbd;
-            /* Bordure beige visible */
             --accent: #4a3f35;
-            /* Liens brun impérial */
         }
-        /* 2. THÈME SOMBRE : "Obsidian Executive Card" */
         
         @media (prefers-color-scheme: dark) {
              :root {
                 --bg: #141311;
-                /* Noir anthracite très profond */
                 --surface: #201e1b;
-                /* Noir-brun légèrement plus clair pour les cartes */
                 --text: #f0eae1;
-                /* Texte couleur ivoire / bone (très lisible) */
                 --text-light: #a49e93;
-                /* Ivoire grisé */
                 --border: #36322d;
-                /* Bordure sombre discrète */
                 --accent: #d8ccb4;
-                /* Liens couleur champagne */
             }
         }
-        /* 3. Typographie aristocratique (American Psycho) */
         
         body,
         h1,
@@ -71,7 +55,6 @@
             font-size: 2.3rem;
             margin-bottom: 0.5rem;
         }
-        /* 4. Correction du Header et du Menu (Plus de gris terne en mode sombre) */
         
         header {
             background-color: var(--surface);
@@ -110,7 +93,6 @@
             padding-top: 1rem;
             border-bottom: 1px solid var(--border);
         }
-        /* 5. Contraste net pour les fiches de projets (Articles) */
         
         article {
             background-color: var(--surface);
@@ -126,7 +108,6 @@
             transform: translateY(-2px);
             box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
         }
-        /* 6. Grille CV alignée */
         
         .cv-item {
             display: grid;
@@ -181,7 +162,7 @@
 
         <div id="accueil">
             <h1>Welcome to Arthur Evain's Portfolio</h1>
-            <p>I am a second-year engineering student at Télécom Paris.</p>
+            <p>I am a second-year Master's student in the MVA program.</p>
         </div>
     </header>
 
@@ -190,7 +171,7 @@
         <section id="contact">
             <h2>Contact</h2>
             <ul>
-                <li><strong>Email</strong> — <a href="mailto:arthur.evain@telecom-paris.fr">arthur.evain@telecom-paris.fr</a></li>
+                <li><strong>Email</strong> — <a href="mailto:arthur.evain@polytechnique.edu">arthur.evain@polytechnique.edu</a></li>
                 <li><strong>LinkedIn</strong> — <a href="https://www.linkedin.com/in/arthur-evain-35760sg/" target="_blank">My Profile</a></li>
             </ul>
         </section>

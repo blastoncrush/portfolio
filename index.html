@@ -170,7 +170,7 @@
 <body>
     <header>
         <nav>
-            <a href="./index_en.html">English</a>
+            <a href="./en/index.html">English</a>
             <a href="#accueil">Accueil</a>
             <a href="#cv">CV</a>
             <a href="#projets">Projets</a>
@@ -189,8 +189,18 @@
         <section id="contact">
             <h2>Contact</h2>
             <ul>
-                <li><strong>Email</strong> — <a href="mailto:arthur.evain@polytechnique.edu">arthur.evain@polytechnique.edu</a></li>
-                <li><strong>LinkedIn</strong> — <a href="https://www.linkedin.com/in/arthur-evain-35760sg/" target="_blank">Mon profil</a></li>
+                <li><strong>Email</strong> — <a href="#" id="email-link">Cliquer ici</a>
+                    <script>
+                        const user = "arthur.evain";
+                        const domain = "ens-paris-saclay.fr"; // ou ton domaine perso
+                        const link = document.getElementById("email-link");
+                        link.addEventListener("click", (e) => {
+                            e.preventDefault();
+                            window.location.href = `mailto:${user}@${domain}`;
+                        });
+                    </script>
+                    <!-- <a href="mailto:arthur.evain@polytechnique.edu">arthur.evain@polytechnique.edu</a></li> -->
+                    <li><strong>LinkedIn</strong> — <a href="https://www.linkedin.com/in/arthur-evain-35760sg/" target="_blank">Mon profil</a></li>
             </ul>
         </section>
 
